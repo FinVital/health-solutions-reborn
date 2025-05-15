@@ -1,13 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Hero from "@/components/home/Hero";
+import Programs from "@/components/home/Programs";
+import Mission from "@/components/home/Mission";
+import Impact from "@/components/home/Impact";
+import ServiceFinder from "@/components/home/ServiceFinder";
+import NewsSection from "@/components/home/NewsSection";
+import CTA from "@/components/home/CTA";
+import { useEffect } from "react";
 
 const Index = () => {
+  // Scroll to top when the page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Hero />
+      <Programs />
+      <Mission />
+      <Impact />
+      <ServiceFinder />
+      <NewsSection />
+      <CTA />
+    </>
   );
 };
 
